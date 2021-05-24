@@ -9,9 +9,13 @@ import os
 class Entity_Manager(object):
 
 	solr = 'http://localhost:8983/solr/'
+	if os.getenv('OPEN_SEMANTIC_ETL_SOLR'):
+            solr = os.getenv('OPEN_SEMANTIC_ETL_SOLR')
 	solr_core = 'opensemanticsearch-entities'
 
 	solr_synonyms = 'http://localhost:8983/solr/'
+	if os.getenv('OPEN_SEMANTIC_ETL_SOLR'):
+            solr_synonyms = os.getenv('OPEN_SEMANTIC_ETL_SOLR')
 	solr_core_synonyms = 'opensemanticsearch'
 
 	wordlist_configfilename = "/etc/opensemanticsearch/ocr/dictionary.txt"
