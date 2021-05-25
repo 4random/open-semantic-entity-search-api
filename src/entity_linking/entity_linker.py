@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import sys
+import os
 
 #
 # Named Entity Linking, Disambiguation and Normalization by Named Entities in Solr search index
